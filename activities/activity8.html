@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body{
+		text-align: center;
+	}
+	#box{
+	background-color:rgb(3, 134, 3);
+	width:100px;
+	height:100px;
+	margin: auto ;
+	}
+	.container{
+	background-color: gray;
+	padding:15px;
+	width:80%;
+	margin:0 auto;
+	}
+</style>
+	<script>
+
+	function shrinkHeight(change="10px"){
+		var box = document.getElementById('box'); 
+		var h = box.style.height = change;
+		var hNew = box.style.height=( parseInt("40px") + parseInt(h) ) + "px";
+		}
+
+	function growHeight(change="10px"){
+		var box = document.getElementById('box'); 
+		var h = box.style.height =change;
+		var hNew = box.style.height =( parseInt("500px") + parseInt(h) ) + "px";
+		}
+	function shrinkWidth(change="10px"){
+		var box = document.getElementById('box'); 
+		var w = box.style.width = change;
+		var hNew = box.style.width=( parseInt("40px") + parseInt(w) ) + "px";
+		}
+
+	function growWidth(change="10px"){
+		var box = document.getElementById('box'); 
+		var w = box.style.width =change;
+		var hNew = box.style.width =( parseInt("500px") + parseInt(w) ) + "px";
+		}
+	</script>
+</head>
+<body>
+<h1>Activity 8</h1>
+<div class="container">
+	<div id="box"></div><br>
+		<button onclick="shrinkHeight()">SHRINK HEIGHT</button>
+		<button onclick="growHeight()">GROW HEIGHT</button><br>
+		<button onclick="shrinkWidth()">SHRINK WIDTH</button>
+		<button onclick="growWidth()">GROW WIDTH</button>
+</div>
+</body>
+</html>

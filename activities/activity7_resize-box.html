@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#box{
+		background-color:blue;
+		width:100px;
+		height:100px;
+	}
+	</style>
+	<script>
+
+	function resizeBox(change="10px"){
+		var box = document.getElementById('box'); 
+		var w = box.style.width = change;
+		var h = box.style.height = change;
+		var wNew = box.style.width =( parseInt("200px") + parseInt(w) ) + "px";
+		var hNew = box.style.height=( parseInt("200px") + parseInt(h) ) + "px";
+		}
+
+	function resizeBox1(change="10px"){
+		var box = document.getElementById('box'); 
+		var w = box.style.width =change;
+		var h = box.style.height =change;
+		var wNew = box.style.width =( parseInt("300px") + parseInt(w) ) + "px";
+		var hNew = box.style.height =( parseInt("300px") + parseInt(h) ) + "px";
+		}
+	</script>
+</head>
+<body>
+	<h1>Activity 7</h1>
+	<div id="box">
+	</div><br>
+	<button onclick="resizeBox()">Button 1</button>
+	<button onclick="resizeBox1()">Button 2</button>
+</body>
+</html>

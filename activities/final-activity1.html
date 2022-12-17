@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  function DayAsString(num)
+  {
+    var WEEKS = [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ];
+    return WEEKS [num-1];
+  }
+  function enterDay()
+  {
+    var Today = prompt("Enter the Day of The Week (Number Only 1-7)");
+    alert("The Day of This Week is : " + DayAsString(Today));
+    
+  }
+  function getCurrentDay()
+  {
+    var today = new Date();
+      alert(DayAsString(today.getDay()+1));
+  }
+</script>
+<body>
+  <button onclick="getCurrentDay()" id="btn">GET CURRENT DAY</button>
+  <button onclick="enterDay()" id="btn">CHOOSE DAY</button>
+</body>
+</html>

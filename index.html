@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/03c95c7899.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/PrinceLogo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li> 
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Student/Web Developer</p>
+            <h1>Hi, I'm <span>Prince Joie Medina</span><br>From Mabalacat</h1>
+        </div>
+    </div>
+</div>
+<!-- -------------about-------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Me.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi I'm Pj, an IT student who is devoted, open-minded, and a bit extroverted person.
+                I am flexible when things change. And I believe that a person should constantly endeavor to improve their professional skills and learn new things.
+                And of course always put God first before everything. </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Critical thinking and problem solving</span></li>
+                        <li><span>Teamwork and collaboration</span></li>
+                        <li><span>Staying positive</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="hobbies">
+                    <ul>
+                        <li><span>Sports</span><br> Basketball, Pool Billiard, Volleyball</li>
+                        <li><span>Movies</span><br> Drama, Comedy, Action</li>
+                        <li><span>Mobile Games</span><br> Mobile Legends, Call of Duty, Clash of Clans</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Education</span><br> Mabalacat City College<br> Present</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------Portfolio------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Activities</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Activity 1</h3>
+                    <a href="activities/activity1.html"><i class="fa-solid fa-code"></i></a>
+                    <h3>Activity 2</h3>
+                    <a href="activities/activity2_variables.html"><i class="fa-solid fa-code"></i></a>
+                    <h3>Activity 4</h3>
+                    <a href="activities/activity4_operators.html"><i class="fa-solid fa-code"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Activity 5</h3>
+                    <a href="activities/activity5_built-in-functions.html"><i class="fa-solid fa-code"></i></a>
+                    <h3>Activity 6</h3>
+                    <a href="activities/activity6.html"><i class="fa-solid fa-code"></i></a>
+                    <h3>Activity 7</h3>
+                    <a href="activities/activity7_resize-box.html"><i class="fa-solid fa-code"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Activity 8</h3>
+                    <a href="activities/activity8.html"><i class="fa-solid fa-code"></i></a>
+                    <h3>Final Activity 1</h3>
+                    <a href="activities/final-activity1.html"><i class="fa-solid fa-code"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-----------------Contact------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>medinaprincejoie@gmail.com</p>
+                <p><i class="fa-sharp fa-solid fa-square-phone"></i>09075575028</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/pijeeeeeeey"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/pijeeeeeeey/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/pj-medina-76707225b/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+               
+            
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>

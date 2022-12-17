@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style media="screen">
+		body{
+		  background-color:#043349;
+		  font-family:'Times New Roman', Times, serif;
+		}
+		.container{
+			background-color:#FFF;
+			padding:15px;
+			width:70%;
+			margin:0 auto;
+		}
+	  </style>
+	<script>
+		var name = window.prompt ('Enter your Fullname:',"");
+		var age = window.prompt ('What age you started working with a computer?',"");
+		var cAge = window.prompt ('How old are you now?',"");
+		var years = (parseInt(cAge) - parseInt(age));
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>Activity_6</h1>
+		<strong> Name: </strong> <script type="text/javascript">document.write(name)</script> <br />
+		<strong> Age Started: </strong> <script type="text/javascript">document.write(age)</script> <br />
+		<strong> Current Age: </strong> <script type="text/javascript">document.write(cAge)</script> <br />
+		<strong><script type="text/javascript">document.write(name)</script> You are working with computer for <script type="text/javascript">document.write(years)</script> Years</strong>
+	</div>
+</body>
+</html>
